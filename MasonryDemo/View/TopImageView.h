@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TopImageView : UIView
+@interface TopImageView : UIView<UIScrollViewDelegate>
+
+@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UIPageControl *pageControl;
 
 @end
