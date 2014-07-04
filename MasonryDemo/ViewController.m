@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ScrollView.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.title = @"ScrollView";
+    self.view = [[ScrollView alloc] init];
+    
 }
 
 - (void)didReceiveMemoryWarning
