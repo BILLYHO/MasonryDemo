@@ -22,7 +22,6 @@
     
     self.title = @"ScrollView";
     self.view = [[ScrollView alloc] init];
-    
 }
 
 - (void)didReceiveMemoryWarning

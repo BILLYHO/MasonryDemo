@@ -8,6 +8,7 @@
 
 #import "ScrollView.h"
 #import "TopView.h"
+#import "TopImageView.h"
 
 @interface ScrollView ()
 @property (strong, nonatomic) UIScrollView* scrollView;
@@ -22,6 +23,8 @@
     UIScrollView *scrollView = UIScrollView.new;
     self.scrollView = scrollView;
     scrollView.backgroundColor = [UIColor grayColor];
+    [scrollView setContentSize:CGSizeMake(100*10, 100)];
+
     [self addSubview:scrollView];
     [self.scrollView makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
@@ -35,27 +38,34 @@
         make.width.equalTo(self.scrollView.width);
     }];
     
+    TopImageView *view = [[TopImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 150)];
+    view.backgroundColor = [self randomColor];
+    [contentView addSubview:view];
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@(0));
+        make.left.equalTo(@0);
+        make.width.equalTo(@(320));
+        make.height.equalTo(@(150));
+    }];
     UIView *lastView;
-    CGFloat height = 200;
+    lastView = view;
     
-    for (int i = 0; i < 10; i++) {
-        TopView *view = [[TopView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
+    
+    for (int i = 0; i < 5; i++) {
+        TopView *view = [[TopView alloc] init];
         view.backgroundColor = [self randomColor];
         [contentView addSubview:view];
         
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
-            if (lastView) {
-                 make.top.equalTo(lastView.bottom).offset(10);
-            } else {
-                make.top.equalTo(@(0));
-            }
-           
+            make.top.equalTo(lastView.bottom).offset(10);
             make.left.equalTo(@0);
-            make.width.equalTo(contentView.width);
-            make.height.equalTo(@(height));
+            make.width.equalTo(@(320));
+            make.height.equalTo(@(100));
         }];
         lastView = view;
     }
+    
+    
     
     // dummy view, which determines the size of the contentView size and therefore the scrollView contentSize
     UIView *sizingView = UIView.new;

@@ -10,9 +10,9 @@
 
 @implementation TopView
 
-- (id)initWithFrame:(CGRect)frame
+- (id)init
 {
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self) {
         // Initialization code
         UILabel *view1 = [[UILabel alloc]init];

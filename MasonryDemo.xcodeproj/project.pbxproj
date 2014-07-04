@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A94A7E5A3E3449338D6B7114 /* libPods-MasonryDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E1866E453344F897C9DA3D /* libPods-MasonryDemo.a */; };
+		F670217119665746007AC184 /* TopImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F670217019665746007AC184 /* TopImageView.m */; };
 		F6B3517419654C180093AE7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B3517319654C180093AE7D /* Foundation.framework */; };
 		F6B3517619654C180093AE7D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B3517519654C180093AE7D /* CoreGraphics.framework */; };
 		F6B3517819654C180093AE7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B3517719654C180093AE7D /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 /* Begin PBXFileReference section */
 		02E1866E453344F897C9DA3D /* libPods-MasonryDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MasonryDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8379DEA93B7C4341A97084C4 /* Pods-MasonryDemo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasonryDemo.xcconfig"; path = "Pods/Pods-MasonryDemo.xcconfig"; sourceTree = "<group>"; };
+		F670216F19665746007AC184 /* TopImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopImageView.h; path = View/TopImageView.h; sourceTree = "<group>"; };
+		F670217019665746007AC184 /* TopImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopImageView.m; path = View/TopImageView.m; sourceTree = "<group>"; };
 		F6B3517019654C180093AE7D /* MasonryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasonryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B3517319654C180093AE7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F6B3517519654C180093AE7D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -169,6 +172,8 @@
 			children = (
 				F6B351CD196557F20093AE7D /* TopView.h */,
 				F6B351CE196557F20093AE7D /* TopView.m */,
+				F670216F19665746007AC184 /* TopImageView.h */,
+				F670217019665746007AC184 /* TopImageView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F670217119665746007AC184 /* TopImageView.m in Sources */,
 				F6B3518A19654C180093AE7D /* ViewController.m in Sources */,
 				F6B351CF196557F20093AE7D /* TopView.m in Sources */,
 				F6B351AA1965533A0093AE7D /* ScrollView.m in Sources */,
