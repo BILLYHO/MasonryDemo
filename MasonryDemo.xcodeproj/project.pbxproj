@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		A94A7E5A3E3449338D6B7114 /* libPods-MasonryDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E1866E453344F897C9DA3D /* libPods-MasonryDemo.a */; };
 		F670217119665746007AC184 /* TopImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F670217019665746007AC184 /* TopImageView.m */; };
+		F695F1C819668F25002BDBA6 /* SelectedGoodsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F695F1C719668F25002BDBA6 /* SelectedGoodsView.m */; };
+		F695F1CB196A76B1002BDBA6 /* HerizontialScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F695F1CA196A76B1002BDBA6 /* HerizontialScrollView.m */; };
+		F695F1CF196A8014002BDBA6 /* MainScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F695F1CE196A8014002BDBA6 /* MainScrollView.m */; };
+		F695F214196B896A002BDBA6 /* GoodsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F695F213196B896A002BDBA6 /* GoodsView.m */; };
+		F695F217196BE819002BDBA6 /* ModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F695F216196BE819002BDBA6 /* ModuleView.m */; };
 		F6B3517419654C180093AE7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B3517319654C180093AE7D /* Foundation.framework */; };
 		F6B3517619654C180093AE7D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B3517519654C180093AE7D /* CoreGraphics.framework */; };
 		F6B3517819654C180093AE7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B3517719654C180093AE7D /* UIKit.framework */; };
@@ -41,6 +46,16 @@
 		8379DEA93B7C4341A97084C4 /* Pods-MasonryDemo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasonryDemo.xcconfig"; path = "Pods/Pods-MasonryDemo.xcconfig"; sourceTree = "<group>"; };
 		F670216F19665746007AC184 /* TopImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopImageView.h; path = View/TopImageView.h; sourceTree = "<group>"; };
 		F670217019665746007AC184 /* TopImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopImageView.m; path = View/TopImageView.m; sourceTree = "<group>"; };
+		F695F1C619668F25002BDBA6 /* SelectedGoodsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectedGoodsView.h; path = View/SelectedGoodsView.h; sourceTree = "<group>"; };
+		F695F1C719668F25002BDBA6 /* SelectedGoodsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectedGoodsView.m; path = View/SelectedGoodsView.m; sourceTree = "<group>"; };
+		F695F1C9196A76B1002BDBA6 /* HerizontialScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerizontialScrollView.h; sourceTree = "<group>"; };
+		F695F1CA196A76B1002BDBA6 /* HerizontialScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerizontialScrollView.m; sourceTree = "<group>"; };
+		F695F1CD196A8014002BDBA6 /* MainScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScrollView.h; sourceTree = "<group>"; };
+		F695F1CE196A8014002BDBA6 /* MainScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScrollView.m; sourceTree = "<group>"; };
+		F695F212196B896A002BDBA6 /* GoodsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoodsView.h; path = View/GoodsView.h; sourceTree = "<group>"; };
+		F695F213196B896A002BDBA6 /* GoodsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoodsView.m; path = View/GoodsView.m; sourceTree = "<group>"; };
+		F695F215196BE819002BDBA6 /* ModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModuleView.h; path = View/ModuleView.h; sourceTree = "<group>"; };
+		F695F216196BE819002BDBA6 /* ModuleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModuleView.m; path = View/ModuleView.m; sourceTree = "<group>"; };
 		F6B3517019654C180093AE7D /* MasonryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasonryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B3517319654C180093AE7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F6B3517519654C180093AE7D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -90,6 +105,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F695F1CC196A7FAE002BDBA6 /* BasicView */ = {
+			isa = PBXGroup;
+			children = (
+				F695F1C9196A76B1002BDBA6 /* HerizontialScrollView.h */,
+				F695F1CA196A76B1002BDBA6 /* HerizontialScrollView.m */,
+				F6B351A81965533A0093AE7D /* ScrollView.h */,
+				F6B351A91965533A0093AE7D /* ScrollView.m */,
+			);
+			name = BasicView;
+			sourceTree = "<group>";
+		};
+		F695F211196B88F9002BDBA6 /* SelectedGoods */ = {
+			isa = PBXGroup;
+			children = (
+				F695F1C619668F25002BDBA6 /* SelectedGoodsView.h */,
+				F695F1C719668F25002BDBA6 /* SelectedGoodsView.m */,
+				F695F212196B896A002BDBA6 /* GoodsView.h */,
+				F695F213196B896A002BDBA6 /* GoodsView.m */,
+			);
+			name = SelectedGoods;
+			sourceTree = "<group>";
+		};
 		F6B3516719654C170093AE7D = {
 			isa = PBXGroup;
 			children = (
@@ -129,8 +166,9 @@
 				F6B3518319654C180093AE7D /* AppDelegate.m */,
 				F6B3518819654C180093AE7D /* ViewController.h */,
 				F6B3518919654C180093AE7D /* ViewController.m */,
-				F6B351A81965533A0093AE7D /* ScrollView.h */,
-				F6B351A91965533A0093AE7D /* ScrollView.m */,
+				F695F1CD196A8014002BDBA6 /* MainScrollView.h */,
+				F695F1CE196A8014002BDBA6 /* MainScrollView.m */,
+				F695F1CC196A7FAE002BDBA6 /* BasicView */,
 				F6B351CC196557540093AE7D /* View */,
 				F6B3518B19654C180093AE7D /* Images.xcassets */,
 				F6B3517A19654C180093AE7D /* Supporting Files */,
@@ -174,6 +212,9 @@
 				F6B351CE196557F20093AE7D /* TopView.m */,
 				F670216F19665746007AC184 /* TopImageView.h */,
 				F670217019665746007AC184 /* TopImageView.m */,
+				F695F211196B88F9002BDBA6 /* SelectedGoods */,
+				F695F215196BE819002BDBA6 /* ModuleView.h */,
+				F695F216196BE819002BDBA6 /* ModuleView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -310,10 +351,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F670217119665746007AC184 /* TopImageView.m in Sources */,
+				F695F1CF196A8014002BDBA6 /* MainScrollView.m in Sources */,
 				F6B3518A19654C180093AE7D /* ViewController.m in Sources */,
 				F6B351CF196557F20093AE7D /* TopView.m in Sources */,
+				F695F1C819668F25002BDBA6 /* SelectedGoodsView.m in Sources */,
+				F695F214196B896A002BDBA6 /* GoodsView.m in Sources */,
 				F6B351AA1965533A0093AE7D /* ScrollView.m in Sources */,
+				F695F1CB196A76B1002BDBA6 /* HerizontialScrollView.m in Sources */,
 				F6B3518419654C180093AE7D /* AppDelegate.m in Sources */,
+				F695F217196BE819002BDBA6 /* ModuleView.m in Sources */,
 				F6B3518019654C180093AE7D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

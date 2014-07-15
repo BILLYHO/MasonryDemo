@@ -1,28 +1,25 @@
 //
-//  ScrollView.m
+//  MainScrollView.m
 //  MasonryDemo
 //
-//  Created by billy.ho on 7/3/14.
+//  Created by billy.ho on 7/7/14.
 //  Copyright (c) 2014 BILLYHO. All rights reserved.
 //
 
-#import "ScrollView.h"
-#import "TopView.h"
+#import "MainScrollView.h"
 #import "TopImageView.h"
 #import "SelectedGoodsView.h"
+#import "ModuleView.h"
 
-@interface ScrollView ()
-//@property (strong, nonatomic) UIScrollView* scrollView;
-@end
 
-@implementation ScrollView
+@implementation MainScrollView
 
 - (id)init {
     self = [super init];
     if (!self) return nil;
     
     UIScrollView *scrollView = [[UIScrollView alloc]init];
-    scrollView.backgroundColor = [UIColor grayColor];
+    scrollView.backgroundColor = [UIColor lightGrayColor];
     [self addSubview:scrollView];
     [scrollView makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
@@ -40,9 +37,9 @@
     topImageView.backgroundColor = [self randomColor];
     [contentView addSubview:topImageView];
     [topImageView makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@(0));
-        make.left.equalTo(@0);
-        make.width.equalTo(@(320));
+        make.top.equalTo(contentView.top);
+        make.left.equalTo(contentView.left);
+        make.width.equalTo(contentView.width);
         make.height.equalTo(@(150));
     }];
     
@@ -52,27 +49,25 @@
     [contentView addSubview:selectedGoodsView];
     [selectedGoodsView makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(topImageView.bottom);
-        make.left.equalTo(@(0));
-        make.width.equalTo(@(320));
-        make.height.equalTo(@(150));
+        make.left.equalTo(contentView.left);
+        make.width.equalTo(contentView.width);
+        make.height.equalTo(@(180));
     }];
     
     UIView *lastView;
     lastView = selectedGoodsView;
     
-    // add view here
-    
-    
-    for (int i = 0; i < 5; i++) {
-        TopView *view = [[TopView alloc] init];
+    for (int i = 0; i < 5; i++)
+    {
+        ModuleView *view = [[ModuleView alloc] init];
         view.backgroundColor = [self randomColor];
         [contentView addSubview:view];
         
         [view makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(lastView.bottom).offset(10);
-            make.left.equalTo(@0);
-            make.width.equalTo(@(320));
-            make.height.equalTo(@(100));
+            make.top.equalTo(lastView.bottom).offset(15);
+            make.left.equalTo(contentView.left);
+            make.width.equalTo(contentView.width);
+            make.height.equalTo(@(300));
         }];
         lastView = view;
     }
@@ -96,7 +91,5 @@
     CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from black
     return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
 }
-
-
 
 @end

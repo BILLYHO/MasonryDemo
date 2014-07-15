@@ -1,21 +1,14 @@
 //
-//  ScrollView.m
+//  HerizontialScrollView.m
 //  MasonryDemo
 //
-//  Created by billy.ho on 7/3/14.
+//  Created by billy.ho on 7/7/14.
 //  Copyright (c) 2014 BILLYHO. All rights reserved.
 //
 
-#import "ScrollView.h"
-#import "TopView.h"
-#import "TopImageView.h"
-#import "SelectedGoodsView.h"
+#import "HerizontialScrollView.h"
 
-@interface ScrollView ()
-//@property (strong, nonatomic) UIScrollView* scrollView;
-@end
-
-@implementation ScrollView
+@implementation HerizontialScrollView
 
 - (id)init {
     self = [super init];
@@ -33,58 +26,58 @@
     [scrollView addSubview:contentView];
     [contentView makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(scrollView);
-        make.width.equalTo(scrollView.width);
+        make.height.equalTo(scrollView.height);
     }];
     
-    TopImageView *topImageView = [[TopImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 150)];
+    UIView *topImageView = [[UIView alloc] init];
     topImageView.backgroundColor = [self randomColor];
     [contentView addSubview:topImageView];
     [topImageView makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(@(0));
         make.left.equalTo(@0);
-        make.width.equalTo(@(320));
+        make.width.equalTo(@(200));
         make.height.equalTo(@(150));
     }];
     
     
-    SelectedGoodsView *selectedGoodsView = [[SelectedGoodsView alloc] init];
-    selectedGoodsView.backgroundColor = [self randomColor];
-    [contentView addSubview:selectedGoodsView];
-    [selectedGoodsView makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(topImageView.bottom);
-        make.left.equalTo(@(0));
+    UIView *topImageView2 = [[UIView alloc] init];
+    topImageView2.backgroundColor = [self randomColor];
+    [contentView addSubview:topImageView2];
+    [topImageView2 makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@(0));
+        make.left.equalTo(topImageView.right);
         make.width.equalTo(@(320));
         make.height.equalTo(@(150));
     }];
     
     UIView *lastView;
-    lastView = selectedGoodsView;
-    
-    // add view here
+    lastView = topImageView2;
     
     
-    for (int i = 0; i < 5; i++) {
-        TopView *view = [[TopView alloc] init];
-        view.backgroundColor = [self randomColor];
-        [contentView addSubview:view];
-        
-        [view makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(lastView.bottom).offset(10);
-            make.left.equalTo(@0);
-            make.width.equalTo(@(320));
-            make.height.equalTo(@(100));
-        }];
-        lastView = view;
-    }
+    //add view here
     
+//    for (int i = 0; i < 5; i++) {
+//        TopView *view = [[TopView alloc] init];
+//        view.backgroundColor = [self randomColor];
+//        [contentView addSubview:view];
+//        
+//        [view makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(lastView.bottom).offset(10);
+//            make.left.equalTo(@0);
+//            make.width.equalTo(@(320));
+//            make.height.equalTo(@(100));
+//        }];
+//        lastView = view;
+//    }
+//    
     
     
     // dummy view, which determines the size of the contentView size and therefore the scrollView contentSize
     UIView *sizingView = UIView.new;
     [scrollView addSubview:sizingView];
     [sizingView makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(lastView.bottom);
-        make.bottom.equalTo(contentView.bottom);
+        make.left.equalTo(lastView.right);
+        make.right.equalTo(contentView.right);
     }];
     
     return self;
@@ -96,7 +89,6 @@
     CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from black
     return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
 }
-
 
 
 @end
